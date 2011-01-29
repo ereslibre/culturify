@@ -1,0 +1,22 @@
+{
+  "public" : {
+    "host"     : "super.cool.host.zzz",
+    "port"     : 27017,
+    "database" : "culture",
+    "readonly" : {
+      "username" : "culture",
+      "password" : "culture"
+    },
+    "full" : {
+      "username" : "privateuser1",
+      "password" : "secret1"
+    }
+  },
+  "private" : {
+    "host"     : "localhost",
+    "port"     : 27017,
+    "database" : "private",
+    "username" : "privateuser2",
+    "password" : "secret2"
+  }
+}

@@ -1,0 +1,35 @@
+Considering your ddbb.json configuration file is something like this:
+
+{
+  "public" : {
+    "host"     : "localhost",
+    "port"     : 27017,
+    "database" : "culture",
+    "readonly" : {
+      "username" : "culture",
+      "password" : "culture"
+    },
+    "full" : {
+      "username" : "privateuser1",
+      "password" : "secret1"
+    }
+  },
+  "private" : {
+    "host"     : "localhost",
+    "port"     : 27017,
+    "database" : "private",
+    "username" : "privateuser2",
+    "password" : "secret2"
+  }
+}
+
+You should perform this commands in order to create users with the correct
+privileges over the MongoDB database:
+
+> mongo
+
+> use culture
+> db.addUser("culture", "culture", true)
+> db.addUser("privateuser1", "secret1")
+> use private
+> db.addUser("privateuser2", "secret2")
