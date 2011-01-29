@@ -20,3 +20,4 @@
 $: << File.dirname(File.expand_path __FILE__)
 
 require "culturify"
+run Sinatra::Application
